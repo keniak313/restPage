@@ -1,8 +1,9 @@
+import data from "./data.json";
 export const menu = document.createElement("div");
 menu.classList.add("menu");
 
 const dishes = [];
-const categories = [`Przystawki`, `Zupy`, `Główne Dania`, `Desery`];
+const categories = [];//[`Przystawki`, `Zupy`, `Główne Dania`, `Desery`];
 
 class Dish {
     constructor(name, description, price, category){
@@ -38,20 +39,6 @@ class Dish {
     }
 }
 
-new Dish("Śledzik", "Rybka w oleju", "3.35zł", `Przystawki`);
-new Dish("Ogóreczek", "Z bułeczką", "3.35zł", `Przystawki`);
-
-new Dish("Żuruś", "Z jajkiem w chlebku", "4.50zł", `Zupy`);
-new Dish("Barszczyk", "Oraz ziemniaczek i skwarki", "4.50zł", `Zupy`);
-
-new Dish("Kiełbaska", "Smażona z ziemniaczkiem", "2.25zł", `Główne Dania`);
-new Dish("Kotlecik", "Z kartofelkiem z pieca oraz kapustką", "2.25zł", `Główne Dania`);
-new Dish("Mielonek", "Smażona kiełbasa z ziemniaczkiem", "2.25zł", `Główne Dania`);
-
-new Dish("Beza", "Opis", "3.35zł", "Desery");
-new Dish("Szarlotka", "Opis", "3.35zł", "Desery");
-
-console.log(categories);
 function createMenu(){
     let i = 0;
     categories.forEach((category) =>{
@@ -72,4 +59,24 @@ function createMenu(){
     })
 }
 
-createMenu();
+function loadItems(){
+    for (const category of data.categories){
+        categories.push(category);
+    };
+    for (const dish of data.dishes){
+        new Dish(dish.name, dish.description, dish.price, dish.category);
+    };
+    createMenu();
+}
+
+loadItems();
+
+// loadJSON().then((val) => {
+//     for (const category of val.categories){
+//         categories.push(category);
+//     };
+//     for (const dish of val.dishes){
+//         new Dish(dish.name, dish.description, dish.price, dish.category);
+//     };
+//     createMenu();
+// });

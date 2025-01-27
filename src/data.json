@@ -1,0 +1,74 @@
+{
+    "test": "Wynik testu",
+    "logo": "Jak kiedyś...",
+    "menu": "Menu",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "mainTitle": "Witajcie!",
+    "mainText": "Cos cos cos...",
+    "aboutTitle": "O nos...",
+    "aboutText": "Tutaj powinno byc napisance coś o nas. Ale jeszcze nic nie wiadomo na ten temat...",
+    "contactTitle": "Odwiedź nas!",
+    "contactName": "Jak kiedyś... S.C.",
+    "contactAddress": "Łódź",
+    "contactPhone": "+48 000 000 000",
+    "contactEmail": "jak_kiedys@tutaj.pl",
+    "contactMapInfo": "Jak będzie Api to i będzie mapa.",
+    "categories":["Przystawki", "Zupy", "Główne Dania", "Desery"],
+    "dishes":[
+        {
+            "name": "Śledzik",
+            "description": "Rybka w oleju",
+            "price": "0,00 zł",
+            "category": "Przystawki"
+        },
+        {
+            "name": "Ogóreczek",
+            "description": "Z bułeczką",
+            "price": "0,00 zł",
+            "category": "Przystawki"
+        },
+        {
+            "name": "Żuruś",
+            "description": "Z jajkiem w chlebku",
+            "price": "0,00 zł",
+            "category": "Zupy"
+        },
+        {
+            "name": "Barszczyk Czerwony",
+            "description": "Oraz ziemniaczek i skwarki",
+            "price": "0,00 zł",
+            "category": "Zupy"
+        },
+        {
+            "name": "Kiełbaska",
+            "description": "Smażona z ziemniaczkiem",
+            "price": "0,00 zł",
+            "category": "Główne Dania"
+        },
+        {
+            "name": "Kotlecik",
+            "description": "Z kartofelkiem z pieca oraz kapustką",
+            "price": "0,00 zł",
+            "category": "Główne Dania"
+        },
+        {
+            "name": "Mielonek",
+            "description": "Opis",
+            "price": "0,00 zł",
+            "category": "Główne Dania"
+        },
+        {
+            "name": "Beza",
+            "description": "Opis",
+            "price": "0,00 zł",
+            "category": "Desery"
+        },
+        {
+            "name": "Szarlotka",
+            "description": "Opis",
+            "price": "0,00 zł",
+            "category": "Desery"
+        }
+    ]
+}

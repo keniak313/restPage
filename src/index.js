@@ -1,10 +1,11 @@
 import "./styles.css"
 import {header} from "./header.js";
 import {footer} from "./footer.js";
-import {main} from "./main.js"
-import {menu} from "./menu.js"
-import {about} from "./about.js"
-import {contact} from "./contact.js"
+import {main} from "./main.js";
+import {menu} from "./menu.js";
+import {about} from "./about.js";
+import {contact} from "./contact.js";
+import data from "./data.json";
 
 const navItems = [main, menu, about, contact];
 
@@ -14,7 +15,6 @@ let currentView = "main"
 
 export function updateContent(item){
     navItems.forEach((val) =>{
-        console.log(`val ${val.className} oraz name ${item.classList}`);
         if(val.className === item.dataset.id && val.className != currentView){
             currentView = val.className;
             content.replaceChildren(val);
@@ -37,3 +37,10 @@ content.appendChild(main);
 document.body.appendChild(header);
 document.body.appendChild(content);
 document.body.appendChild(footer);
+
+//Parse JSON
+// export async function loadJSON() {
+//     const response = await fetch("./data.json");
+//     const _dataJSON = await response.json();
+//     return _dataJSON;
+// };

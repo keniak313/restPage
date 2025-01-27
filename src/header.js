@@ -1,5 +1,6 @@
 export const header = document.createElement("header");
-import { updateContent } from "./index.js";
+import { updateContent} from "./index.js";
+import data from "./data.json";
 
 const headerContainer = document.createElement("div");
 headerContainer.classList.add("headerContainer");
@@ -7,7 +8,6 @@ headerContainer.classList.add("headerContainer");
 const logo = document.createElement("div");
 logo.classList.add("logo");
 logo.dataset.id = "main";
-logo.textContent = "Jak kiedyś...";
 
 logo.addEventListener("click", () => {
     updateContent(logo);
@@ -27,13 +27,20 @@ function navItem (name, navId){
     return navItem;
 }
 
-nav.appendChild(navItem("menu", "menu"));
-nav.appendChild(navItem("o nas", "about"));
-nav.appendChild(navItem("kontakt", "contact"));
-
 headerContainer.appendChild(logo);
 headerContainer.appendChild(nav);
 
 header.appendChild(headerContainer);
 
+logo.textContent = data.logo;
+nav.appendChild(navItem(data.menu, "menu"));
+nav.appendChild(navItem(data.about, "about"));
+nav.appendChild(navItem(data.contact, "contact")); 
+
+// loadJSON().then((val) => {
+//     logo.textContent = val.logo;
+//     nav.appendChild(navItem(val.menu, "menu"));
+//     nav.appendChild(navItem(val.about, "about"));
+//     nav.appendChild(navItem(val.contact, "contact")); 
+// });
 
